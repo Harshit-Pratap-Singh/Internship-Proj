@@ -13,7 +13,7 @@ function Navbar_search() {
     setItem(e.target.value);
 
     suggest(e.target.value).then((items) => {
-      if (item == "" || item == null) setItems([]);
+      if (item === "" || item === null) setItems([]);
       else setItems(items);
     });
   };

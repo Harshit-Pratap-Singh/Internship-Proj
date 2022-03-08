@@ -1,15 +1,15 @@
 import React from "react";
 import style from "./NavBar.module.css";
-import Navbar_logo from "./Navbar_logo";
-import Navbar_right from "./Navbar_right";
-import Navbar_search from "./Navbar_search";
+import NavbarLogo from "./NavbarLogo";
+import NavbarRight from "./NavbarRight";
+import NavbarSearch from "./NavbarSearch";
 
 function NavBar() {
   return (
     <div className={style.container}>
-      <Navbar_logo />
-      <Navbar_search />
-      <Navbar_right />
+      <NavbarLogo />
+      <NavbarSearch />
+      <NavbarRight />
     </div>
   );
 }
