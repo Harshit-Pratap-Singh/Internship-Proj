@@ -1,5 +1,5 @@
 import axios from "axios";
-import { React, useState, useEffect } from "react";
+import { React, useState } from "react";
 import ReactPlayer from "react-player";
 import AdComp from "./AdComp";
 import style from "./VideoList.module.css";
@@ -7,13 +7,13 @@ import style from "./VideoList.module.css";
 function VideoList() {
   const [vidInfo, setvidInfo] = useState();
 
-  useEffect(async () => {
+  async function ppp() {
     const pp = await axios.get(
       "https://storage.googleapis.com/publicmaxtap-prod.appspot.com/data/ads_data_assignment.json"
     );
     setvidInfo(pp.data);
-  }, []);
-
+  }
+  ppp();
   const [showControls, setShowControls] = useState(false);
   const [ad1, setAd1] = useState({ vidId: "", url: "", redirect: "" });
   const [ad2, setAd2] = useState({ vidId: "", url: "", redirect: "" });
@@ -27,7 +27,7 @@ function VideoList() {
       else return false;
     });
 
-    if (vidId == "v1") {
+    if (vidId === "v1") {
       var i;
       for (i = 0; i < subList.length; i++) {
         var item = subList[i];
@@ -50,17 +50,16 @@ function VideoList() {
         }
       }
     } else {
-      var i;
       for (i = 0; i < subList.length; i++) {
-        var item = subList[i];
+        var item1 = subList[i];
         if (
-          item.ad_start_time <= time ? (item.ad_end_time >= time ? 1 : 0) : 0
+          item1.ad_start_time <= time ? (item1.ad_end_time >= time ? 1 : 0) : 0
         ) {
           console.log("ajshkdkhskfjbsdkjfds");
           let temp = ad2;
           temp.vidId = vidId;
-          temp.url = item.ad_image;
-          temp.redirect = item.on_click;
+          temp.url = item1.ad_image;
+          temp.redirect = item1.on_click;
           setAd2({ ...temp });
           break;
         } else {
@@ -91,7 +90,7 @@ function VideoList() {
             showAd(e, "v1");
           }}
         />
-        {ad1.vidId != "" && <AdComp ad={ad1} />}
+        {ad1.vidId !== "" && <AdComp ad={ad1} />}
       </div>
       <div className={style.video}>
         <ReactPlayer
@@ -106,7 +105,7 @@ function VideoList() {
             showAd(e, "v2");
           }}
         />
-        {ad2.vidId != "" && <AdComp ad={ad2} />}
+        {ad2.vidId !== "" && <AdComp ad={ad2} />}
       </div>
     </div>
   );

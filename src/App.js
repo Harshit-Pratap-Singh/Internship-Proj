@@ -1,7 +1,7 @@
 import style from "./App.module.css";
-import Scroll from "./components/Horizontal Scroll/Scroll";
+// import Scroll from "./components/Horizontal Scroll/Scroll";
 import NavBar from "./components/Nav Bar/NavBar";
-import SideBar from "./components/sideBar/SideBar";
+// import SideBar from "./components/sideBar/SideBar";
 import VideoList from "./components/Videos/VideoList";
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
       <NavBar />
       {/* <SideBar /> */}
       {/* <div className={style.pp}> */}
-        {/* <Scroll /> */}
+      {/* <Scroll /> */}
       {/* </div>  */}
       <VideoList />
     </div>

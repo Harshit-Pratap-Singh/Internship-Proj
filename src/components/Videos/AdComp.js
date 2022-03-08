@@ -1,5 +1,4 @@
 import React from "react";
-import { useEffect } from "react/cjs/react.production.min";
 import style from "./AdComp.module.css";
 
 function AdComp(props) {
@@ -9,7 +8,7 @@ function AdComp(props) {
   //   });
   return (
     <div className={style.container} id="123">
-      <a href={props.ad.redirect} target="_blank">
+      <a href={props.ad.redirect} target="_blank" rel="noreferrer">
         <img src={props.ad.url} alt="ad" className={style.adImg} />
       </a>
     </div>
