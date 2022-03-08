@@ -1,0 +1,12 @@
+.container {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 10%;
+  opacity: 0.8;
+}
+
+.adImg {
+  width: 100%;
+  z-index: 100;
+}

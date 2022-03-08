@@ -1,0 +1,84 @@
+.container {
+  display: flex;
+  align-items: center;
+  height: 2.5rem;
+  border: 1px solid rgb(48 48 48);
+  width: 50vw;
+  border-radius: 2px;
+}
+
+.searchInput {
+  background-color: black;
+  height: calc(2.5rem - 2px);
+  flex-grow: 10;
+  /* padding: 5px; */
+  /* padding-left: 20px; */
+  border: none;
+  font-size: 1rem;
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+  color: #fff;
+  position: relative;
+}
+.searchInput > input {
+  width: 100%;
+  padding-left: 20px;
+}
+
+.searchInput:focus {
+  outline: 1px solid #1c62b9;
+}
+
+.searchButton {
+  height: calc(2.5rem - 2px);
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.searchButton > img {
+  background-color: #212121;
+  height: inherit;
+  padding: 10px;
+}
+
+.searchItem {
+  background-color: white;
+  height: calc(2.5rem - 2px);
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 1rem;
+  color: #212121;
+  font-family: "Roboto";
+  cursor: default;
+}
+
+.suggestionContainer {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  border: 1px solid rgb(48 48 48);
+  display: none;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.enable {
+  display: block;
+}
+
+.searchItem:hover {
+  background-color: #2121211a;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    display: none;
+  }
+}

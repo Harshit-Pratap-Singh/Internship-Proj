@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  /* padding-left: 4.5rem; */
+  padding-top: 60px;
+}
+
+.pp > div {
+  width: calc(100vw - 4.5rem);
+}
+.pp > div {
+  position: relative;
+}
+.pp {
+  display: inline-block;
+  position: fixed;
+  top: 56px;
+  left: 4.5rem;
+  z-index: 10;
+}
+body {
+  background-color: #181818;
+}
